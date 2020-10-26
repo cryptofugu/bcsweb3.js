@@ -7,11 +7,11 @@ const bs58 = require('bs58');
 const Encoder = require('./encoder');
 const Utils = require('../utils');
 
-const MainnetNetworkByte = '3A';
-const TestnetNetworkByte = '78';
+const MainnetNetworkByte = '19';
+const TestnetNetworkByte = '55';
 
 class Decoder {
-  static toQtumAddress(hexAddress, isMainnet = false) {
+  static toBCSAddress(hexAddress, isMainnet = false) {
     if (hexAddress === undefined || isEmpty(hexAddress)) {
       throw new Error('hexAddress should not be undefined or empty');
     }
